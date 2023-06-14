@@ -19,12 +19,7 @@ export class ExtendedClient extends Client {
 
   constructor() {
     super({
-      intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildVoiceStates,
-        GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.DirectMessages,
-      ],
+      intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
     })
 
     process.on('uncaughtException', (error) => {
